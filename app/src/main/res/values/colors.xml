@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core palette - refined dark utility aesthetic -->
+    <color name="background">#0B0F14</color>
+    <color name="surface">#151B24</color>
+    <color name="surface_elevated">#1C2430</color>
+    <color name="surface_variant">#232D3B</color>
+    <color name="border">#2A3544</color>
+    <color name="border_subtle">#1F2836</color>
+
+    <color name="text_primary">#F0F4F8</color>
+    <color name="text_secondary">#A0AEC0</color>
+    <color name="text_muted">#64748B</color>
+
+    <color name="primary">#3B82F6</color>
+    <color name="primary_hover">#2563EB</color>
+    <color name="primary_container">#1E3A5F</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <color name="success">#22C55E</color>
+    <color name="success_container">#14532D</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="error_container">#450A0A</color>
+
+    <color name="secondary">#22C55E</color>
+    <color name="click_point">#F43F5E</color>
+    <color name="overlay_bg">#E0151B24</color>
+
+    <!-- Legacy aliases for compatibility -->
+    <color name="on_surface">@color/text_primary</color>
+</resources>

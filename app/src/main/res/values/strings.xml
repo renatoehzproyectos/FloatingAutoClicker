@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Floating Auto Clicker</string>
+    <string name="accessibility_service_description">Required to perform automatic taps on the screen. Enable this service so the auto clicker can work over other apps.</string>
+    <string name="overlay_notification_title">Auto Clicker active</string>
+    <string name="overlay_notification_text">Floating controls are available</string>
+</resources>

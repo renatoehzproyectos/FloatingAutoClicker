@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/overlay_panel_bg"
+    android:elevation="12dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top: drag + status + close -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnDrag"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="Drag"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:tint="#94A3B8" />
+
+        <TextView
+            android:id="@+id/txtPointsCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0 points"
+            android:textColor="#E2E8F0"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnMinimize"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="Close"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#94A3B8" />
+    </LinearLayout>
+
+    <!-- Hold slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hold"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/txtHold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 ms"
+            android:textColor="#3B82F6"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderHold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0"
+        android:valueTo="1000"
+        android:stepSize="1"
+        android:value="10"
+        app:haloColor="#1E3A5F"
+        app:thumbColor="#3B82F6"
+        app:trackColorActive="#3B82F6"
+        app:trackColorInactive="#334155"
+        app:trackHeight="3dp"
+        app:thumbRadius="8dp" />
+
+    <!-- CPS slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CPS"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/txtCps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textColor="#3B82F6"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderCps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1"
+        android:valueTo="500"
+        android:stepSize="1"
+        android:value="50"
+        app:haloColor="#1E3A5F"
+        app:thumbColor="#3B82F6"
+        app:trackColorActive="#3B82F6"
+        app:trackColorInactive="#334155"
+        app:trackHeight="3dp"
+        app:thumbRadius="8dp" />
+
+    <!-- Points + / − -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnRemovePoint"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="Remove last point"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_input_delete"
+            android:tint="#F43F5E" />
+        <ImageButton
+            android:id="@+id/btnAddPoint"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_ripple"
+            android:contentDescription="Add point"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="#22C55E" />
+    </LinearLayout>
+
+    <!-- Record row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecord"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Record"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:backgroundTint="#7F1D1D"
+            android:textColor="#FECACA"
+            app:cornerRadius="10dp" />
+
+        <View android:layout_width="6dp" android:layout_height="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlayRecord"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Play rec"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:backgroundTint="#1E3A5F"
+            android:textColor="#BFDBFE"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRecordInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="No recording"
+        android:textColor="#64748B"
+        android:textSize="11sp" />
+
+    <!-- Start / Stop normal mode -->
+    <ImageButton
+        android:id="@+id/btnStartStopOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/overlay_start_btn"
+        android:contentDescription="Start or Stop"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_media_play"
+        android:tint="#FFFFFF" />
+
+</LinearLayout>
